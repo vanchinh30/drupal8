@@ -45,7 +45,7 @@ class TaxonomyController extends ControllerBase {
 //
 //  }
 
-   public function CreateTaxonomy(){
+    function CreateTaxonomy(){
      $vid = 'mkd';
      $vocabularies = Vocabulary::loadMultiple();
        $vocabulary = Vocabulary::create([
@@ -63,6 +63,22 @@ class TaxonomyController extends ControllerBase {
        '#markup' => $this->t('Create succesfull!'),
      ];
    }
+
+  public function UpdateTaxonomy(){
+      $vid = 'mkd';
+      $vocabulary = Vocabulary::load($vid);
+      $vocabulary->set('name', 'name updated') ;
+      $vocabulary->set('description', 'description updated');
+      $vocabulary->save();
+
+    return [
+      '#type' => 'markup',
+      '#markup' => $this->t('Update succesfull!'),
+    ];
+  }
+
 }
+
+
 
 ?>
