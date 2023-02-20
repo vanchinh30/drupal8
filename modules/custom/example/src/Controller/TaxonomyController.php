@@ -76,9 +76,8 @@ class TaxonomyController extends ControllerBase {
     ];
   }
 
-  public function DeleteTaxonomy(){
-      $vid = 'mkd';
-      $vocabulary = Vocabulary::load($vid);
+  public function DeleteTaxonomy($id){
+      $vocabulary = Vocabulary::load($id);
       $vocabulary->delete();
 
     return [

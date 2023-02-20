@@ -24,7 +24,7 @@ example.update_vocabulary:
     _permission: 'access content'
 
 example.delete_vocabulary:
-  path: '/mypage/page/taxonomy/delete'
+  path: '/mypage/page/taxonomy/delete/{id}'
   defaults:
     _controller: '\Drupal\example\Controller\TaxonomyController::DeleteTaxonomy'
     _title: 'Delete Taxonomy'
