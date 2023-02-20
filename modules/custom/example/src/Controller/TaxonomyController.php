@@ -77,6 +77,17 @@ class TaxonomyController extends ControllerBase {
     ];
   }
 
+  public function DeleteTaxonomy(){
+      $vid = 'mkd';
+      $vocabulary = Vocabulary::load($vid);
+      $vocabulary->delete();
+
+    return [
+      '#type' => 'markup',
+      '#markup' => $this->t('Delete succesfull!'),
+    ];
+  }
+
 }
 
 

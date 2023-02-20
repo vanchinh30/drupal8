@@ -22,3 +22,11 @@ example.update_vocabulary:
     _title: 'Update Taxonomy'
   requirements:
     _permission: 'access content'
+
+example.delete_vocabulary:
+  path: '/mypage/page/taxonomy/delete'
+  defaults:
+    _controller: '\Drupal\example\Controller\TaxonomyController::DeleteTaxonomy'
+    _title: 'Delete Taxonomy'
+  requirements:
+    _permission: 'access content'
