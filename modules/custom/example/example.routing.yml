@@ -16,7 +16,7 @@ example.create_vocabulary:
     _permission: 'access content'
 
 example.update_vocabulary:
-  path: '/mypage/page/taxonomy/update'
+  path: '/mypage/page/taxonomy/update/{id}'
   defaults:
     _controller: '\Drupal\example\Controller\TaxonomyController::UpdateTaxonomy'
     _title: 'Update Taxonomy'

@@ -64,9 +64,8 @@ class TaxonomyController extends ControllerBase {
      ];
    }
 
-  public function UpdateTaxonomy(){
-      $vid = 'mkd';
-      $vocabulary = Vocabulary::load($vid);
+  public function UpdateTaxonomy($id){
+      $vocabulary = Vocabulary::load($id);
       $vocabulary->set('name', 'name updated') ;
       $vocabulary->set('description', 'description updated');
       $vocabulary->save();
